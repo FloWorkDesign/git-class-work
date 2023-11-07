@@ -1,31 +1,99 @@
 For each one paste the output or the commands right below it.
 
 Create a new directory called "git_practice" and navigate to it.
+mkdir git_practice then cd git_practice/
 
 Inside the "git_practice" directory, create a new file named "index.html" using the touch command.
+touch index.html
 
 Check the status of your Git repository using git status. What does it show?
+fatal: not a git repository (or any of the parent directories): .git
+
+First git init then git status
+
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
 
 Add the "index.html" file to the staging area using git add.
+git add index.html
 
 Check the status again using git status. What is different now?
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
 
 Create a commit with a message "Initial commit" using git commit.
+git commit -m "Initial commit"
 
 Check the commit history using git log. What does it show?
+commit 6fcc03a21fa9b180149e385e67f7e1630632ef6a (HEAD -> main)
+Author: Flo <95972881+FloWorkDesign@users.noreply.github.com>
+Date:   Tue Nov 7 20:32:15 2023 +0000
+
+    Initial commit
 
 Add a new line of text to "index.html" using the echo command and append it to the file using >>.
+echo "This will be my main page." >> index.html
 
 View the contents of "index.html" using cat.
+cat index.html 
 
 Check the status using git status. What does it show now?
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
 
 Add the modified "index.html" to the staging area using git add.
+git add index.html
 
 Create a new commit with a message "Add content to index.html."
+git commit -m "Add content to index.html."
 
 Check the commit history using git log. Has a new commit been added?
+Yes.
+
+commit 4f60d41111913b25e742182fe5829fac781d5643 (HEAD -> main)
+Author: Flo <95972881+FloWorkDesign@users.noreply.github.com>
+Date:   Tue Nov 7 20:38:31 2023 +0000
+
+    Add content to index.html.
+
+commit 6fcc03a21fa9b180149e385e67f7e1630632ef6a
+Author: Flo <95972881+FloWorkDesign@users.noreply.github.com>
+Date:   Tue Nov 7 20:32:15 2023 +0000
+
+    Initial commit
 
 Make another change to "index.html" (e.g., add more text) and create a new commit.
+echo "There will be more content added." >> index.html then git add index.html then git commit -m "There needs to be more content."
+
 
 Check the commit history using git log to verify the additional commit.
+commit 74e248015a182cd16d10a5242f03715ced7bef86 (HEAD -> main)
+Author: Flo <95972881+FloWorkDesign@users.noreply.github.com>
+Date:   Tue Nov 7 20:46:36 2023 +0000
+
+    There needs to be more content.
+
+commit 4f60d41111913b25e742182fe5829fac781d5643
+Author: Flo <95972881+FloWorkDesign@users.noreply.github.com>
+Date:   Tue Nov 7 20:38:31 2023 +0000
+
+    Add content to index.html.
+
+commit 6fcc03a21fa9b180149e385e67f7e1630632ef6a
+Author: Flo <95972881+FloWorkDesign@users.noreply.github.com>
+Date:   Tue Nov 7 20:32:15 2023 +0000
+
+    Initial commit
